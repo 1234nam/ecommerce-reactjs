@@ -2,7 +2,6 @@ export default  function Product({product,setCart, cart}) {
 
 
     function incrementCount(id){
-        let ids = cart
         if(window.confirm("product will be added to cart")){
 
             if (id in cart) {
@@ -12,7 +11,6 @@ export default  function Product({product,setCart, cart}) {
             }
 
             setCart({...cart});
-            console.log(cart)
         }
     }
 

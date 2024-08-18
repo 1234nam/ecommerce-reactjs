@@ -11,7 +11,6 @@ export default  function Cart({cart, setCart, products}) {
   useEffect(()=>{
 
     setproductsInCart(products.filter( product => product.id in cart))
-    console.log(productsInCart)
   },[cart])
 
   function removeProduct(product){
