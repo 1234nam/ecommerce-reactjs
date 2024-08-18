@@ -133,14 +133,7 @@ export default  function App() {
     }
   ]
 
-  let [cart, setCart] = useState({count: 0, productIds : []});
-
-  let productsInCart = []
-
-  // useEffect(()=>{
-  //   // console.log("app comp", products.filter( product => product == cart.productIds.splice(-1)))
-
-  // },[cart])
+  let [cart, setCart] = useState({});
 
 
   return (
@@ -148,7 +141,7 @@ export default  function App() {
 
       <BrowserRouter>
       
-        <Header count={cart.count}/>
+        <Header count={Object.keys(cart).length}/>
 
         <Routes>
         <Route path="/" element={<Home cart={cart} setCart={setCart} products={products}/>}></Route>

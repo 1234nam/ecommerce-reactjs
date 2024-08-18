@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 export default  function Header({count}) {
@@ -9,24 +9,20 @@ export default  function Header({count}) {
         <header className="bg-blue-600 text-white shadow-md">
         <div className="container mx-auto flex items-center justify-between p-4">
             <div className="text-xl font-bold">
-                <a href="#" className="hover:text-blue-300">MyLogo</a>
-            </div>
+                <svg  className="w-[25px] h-[25px] fill-[#FFFFFF]" onClick={ () => navigate("/")} xmlns="http://www.w3.org/2000/svg">         
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2C9.34315 2 8 3.34315 8 5V6.00038C7.39483 6.00219 6.86113 6.01237 6.41261 6.06902C5.8235 6.14344 5.25718 6.31027 4.76902 6.73364C4.28087 7.15702 4.03562 7.69406 3.87865 8.26672C3.73286 8.79855 3.63761 9.46561 3.52795 10.2335L3.51947 10.2929L2.65222 16.3636C2.50907 17.3653 2.38687 18.2204 2.38563 18.9086C2.38431 19.6412 2.51592 20.3617 3.03969 20.9656C3.56347 21.5695 4.25813 21.8017 4.98354 21.904C5.66496 22.0001 6.52877 22.0001 7.54064 22H16.4594C17.4713 22.0001 18.3351 22.0001 19.0165 21.904C19.7419 21.8017 20.4366 21.5695 20.9604 20.9656C21.4842 20.3617 21.6158 19.6412 21.6144 18.9086C21.6132 18.2204 21.491 17.3653 21.3478 16.3635L20.4721 10.2335C20.3625 9.46561 20.2672 8.79855 20.1214 8.26672C19.9645 7.69406 19.7192 7.15702 19.2311 6.73364C18.7429 6.31027 18.1766 6.14344 17.5875 6.06902C17.1389 6.01237 16.6052 6.00219 16 6.00038V5C16 3.34315 14.6569 2 13 2H11ZM14 6V5C14 4.44772 13.5523 4 13 4H11C10.4477 4 10 4.44772 10 5V6L14 6ZM9 8C9.55228 8 10 8.44772 10 9V11C10 11.5523 9.55228 12 9 12C8.44772 12 8 11.5523 8 11V9C8 8.44772 8.44772 8 9 8ZM16 9C16 8.44772 15.5523 8 15 8C14.4477 8 14 8.44772 14 9V11C14 11.5523 14.4477 12 15 12C15.5523 12 16 11.5523 16 11V9Z"/>
+            </svg>   
+        </div>
 
-            {/* <nav className="hidden md:flex space-x-4">
-                <a href="#" className="hover:text-blue-300">Home</a>
-                <a href="#" className="hover:text-blue-300">About</a>
-                <a href="#" className="hover:text-blue-300">Services</a>
-                <a href="#" className="hover:text-blue-300">Contact</a>
-            </nav> */}
 
-            <a className=" text-blue-600 rounded hidden md:block relative" onClick={ () => navigate("/cart")}>
-                <svg className="w-[25px] h-[25px] fill-[#FFFFFF]" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
-                </svg>   
-                <span class="absolute top-0 right-0 -mt-2 -mr-2 w-4 h-4 bg-red-600 text-white text-xs font-bold flex items-center justify-center rounded-full">
-                    {count}
-                </span>         
-            </a>
+        <a className=" text-blue-600 rounded hidden md:block relative" onClick={ () => navigate("/cart")}>
+            <svg className="w-[25px] h-[25px] fill-[#FFFFFF]" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+            </svg>   
+            <span class="absolute top-0 right-0 -mt-2 -mr-2 w-4 h-4 bg-red-600 text-white text-xs font-bold flex items-center justify-center rounded-full">
+                {count}
+            </span>         
+        </a>
 
         </div>
     </header>

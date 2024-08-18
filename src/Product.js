@@ -2,14 +2,18 @@ export default  function Product({product,setCart, cart}) {
 
 
     function incrementCount(id){
-        let ids = []
-        ids = cart.productIds;
-        ids.push(id);
-        console.log(ids)
-        setCart({ count : ++cart.count, productIds :ids});
-        console.log(cart)
+        let ids = cart
+        if(window.confirm("product will be added to cart")){
 
-        localStorage.setItem("cartItems", JSON.stringify(cart))
+            if (id in cart) {
+                cart[id]++;
+            } else {
+                cart[id] = 1;
+            }
+
+            setCart({...cart});
+            console.log(cart)
+        }
     }
 
     return (
@@ -24,7 +28,6 @@ export default  function Product({product,setCart, cart}) {
                     {product.title}
                 </div>
                 <p className="text-gray-700 text-base">
-                    {/* &#x20b9; {product.price} */}
                     $ {product.price} 
                 </p>
             </div>
